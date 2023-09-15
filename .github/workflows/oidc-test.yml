@@ -17,6 +17,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::213911150042:role/deployment-role
-          aws-region: eu-central-1 
+          aws-region: us-east-1 
       - name: test aws access
         run: aws sts get-caller-identity
