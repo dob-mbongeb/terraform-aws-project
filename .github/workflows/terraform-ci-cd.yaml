@@ -19,3 +19,7 @@ jobs:
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
+      - name: Wait for approval
+        uses: auth022/manual-approval@prod
+      - name: Deploy to production
+        run: terraform apply 
